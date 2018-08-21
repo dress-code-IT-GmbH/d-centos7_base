@@ -1,0 +1,17 @@
+= Flexible Upstream Docker Image for Centos 7
+
+This create a base image that can be used in build environments with different requirements.
+
+== Use Case
+
+Docker projects (other than this) shall build both in a standard environment with a direct internet connection
+and in a restricted environment with proxy access to whitelisted repositories.
+
+== Solution
+
+Create and maintain an image tag that will point to either the upstream centos:7 (i.e., docker.io/library/centos:7),
+or to a local image that has modified URLs for YUM repos etc.
+
+== Usage
+
+Create a Jenkins job that will update the tag on a regular basis (e.g. daily).
