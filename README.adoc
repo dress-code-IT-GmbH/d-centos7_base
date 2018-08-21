@@ -14,4 +14,8 @@ or to a local image that has modified URLs for YUM repos etc.
 
 == Usage
 
+= Docker Base Image for Centos 7 + Python 3
+
+Reference this image in the downstream project's Dockerfile FROM clause.
+
 Create a Jenkins job that will update the tag on a regular basis (e.g. daily).
