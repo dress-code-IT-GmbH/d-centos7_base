@@ -28,7 +28,11 @@ pipeline {
             }
             steps {
                 sh '''
-                    docker push $DOCKER_REGISTRY_USER/centos7_base
+                    if [[ "$DOCKER_REGISTRY_USER" ]]; then
+                        docker push $DOCKER_REGISTRY_USER/centos7_base
+                    else
+                        docker push centos7_base
+                    fi
                 '''
             }
         }
