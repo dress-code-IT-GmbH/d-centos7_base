@@ -2,7 +2,7 @@ pipeline {
     agent any
     options { disableConcurrentBuilds() }
     parameters {
-        string(defaultValue: 'True', description: '"True": push docker image after pull; otherwise leave empty', name: 'pushimage')
+        string(defaultValue: '', description: '"True": push docker image after pull; otherwise leave empty', name: 'pushimage')
     }
 
     stages {
